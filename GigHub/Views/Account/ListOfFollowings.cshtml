@@ -1,0 +1,18 @@
+﻿
+@model   ICollection<GigHub.Core.Models.Following>
+   
+    @{
+        ViewBag.Title = "ListOfFollowings";
+    }
+
+    <h2>ListOfFollowings</h2>
+
+    <ul class="gigs voffset4">
+
+        @foreach (var user in Model)
+        {
+            <li>
+                @user.Followee.Name
+            </li>
+        }
+    </ul>
